@@ -11,25 +11,8 @@ module Fog
             "topic" => topic,
           }
           
-          # Data, if present, must be base64 encoded
-          encoded_messages = []
-
-          messages.each do |message|
-            encoded_message = {}
-            if message.is_a?(Hash)
-              encoded_message[:attributes] = message[:attributes]
-              if message.key?(:data)
-                encoded_message[:data] = Base64.strict_encode64(message[:data])
-              end
-            else
-              encoded_message[:data] = Base64.strict_encode64(message.to_s)
-            end
-
-            encoded_messages << encoded_message
-          end
-
           body = {
-            "messages" => encoded_messages,
+            "messages" => messages,
           }
 
           request(api_method, parameters, body)
@@ -37,6 +20,9 @@ module Fog
       end
 
       class Mock
+        def publish_topic(topic, messages)
+          Fog::Mock.not_implemented
+        end
       end
     end
   end

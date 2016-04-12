@@ -19,6 +19,11 @@ module Fog
       model :topic
       collection :topics
 
+      model :subscription
+      collection :subscriptions
+
+      model :received_message
+
       ##
       # REQUESTS
       request_path "fog/google/requests/pubsub"
@@ -28,6 +33,12 @@ module Fog
       request :create_topic
       request :delete_topic
       request :publish_topic
+
+      request :list_subscriptions
+      request :get_subscription
+      request :create_subscription
+      request :pull_subscription
+      request :acknowledge_subscription
     end
   end
 end
