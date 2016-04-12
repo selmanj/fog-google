@@ -2,7 +2,7 @@ require "fog/core/model"
 
 module Fog
   module Google
-    class PubSub
+    class Pubsub
       class Topic < Fog::Model
         identity :name
 

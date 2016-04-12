@@ -3,9 +3,9 @@ require "fog/google/models/pubsub/topic"
 
 module Fog
   module Google
-    class PubSub
+    class Pubsub
       class Topics < Fog::Collection
-        model Fog::Google::PubSub::Topic
+        model Fog::Google::Pubsub::Topic
 
         def all
           data = service.list_topics.body["topics"] || []

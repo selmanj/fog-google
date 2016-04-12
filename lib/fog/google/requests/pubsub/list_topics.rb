@@ -1,6 +1,6 @@
 module Fog
   module Google
-    class PubSub
+    class Pubsub
       class Real
         def list_topics(project = nil)
           api_method = @pubsub.projects.topics.list

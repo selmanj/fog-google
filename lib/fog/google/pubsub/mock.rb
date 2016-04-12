@@ -1,6 +1,6 @@
 module Fog
   module Google
-    class PubSub
+    class Pubsub
       class Mock
         include Fog::Google::Shared
 

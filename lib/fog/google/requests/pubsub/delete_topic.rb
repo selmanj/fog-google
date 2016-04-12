@@ -1,6 +1,6 @@
 module Fog
   module Google
-    class PubSub
+    class Pubsub
       class Real
         def delete_topic(topic_name)
           api_method = @pubsub.projects.topics.delete

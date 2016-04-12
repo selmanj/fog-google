@@ -1,6 +1,6 @@
 module Fog
   module Google
-    class PubSub
+    class Pubsub
       class Real
         include Fog::Google::Shared
 

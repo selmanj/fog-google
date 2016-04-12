@@ -1,6 +1,6 @@
 module Fog
   module Google
-    class PubSub
+    class Pubsub
       class Real
         def get_topic(topic_name)
           api_method = @pubsub.projects.topics.get

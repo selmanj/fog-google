@@ -1,6 +1,6 @@
 module Fog
   module Google
-    class PubSub < Fog::Service
+    class Pubsub < Fog::Service
       autoload :Mock, File.expand_path("../pubsub/mock", __FILE__)
       autoload :Real, File.expand_path("../pubsub/real", __FILE__)
 
