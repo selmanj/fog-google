@@ -15,7 +15,7 @@ module Fog
   module Google
     autoload :Mock, File.expand_path("../google/mock", __FILE__)
     autoload :Monitoring, File.expand_path("../google/monitoring", __FILE__)
-    autoload :PubSub, File.expand_path("../google/pubsub", __FILE__)
+    autoload :Pubsub, File.expand_path("../google/pubsub", __FILE__)
     autoload :Shared, File.expand_path("../google/shared", __FILE__)
     autoload :SQL, File.expand_path("../google/sql", __FILE__)
 

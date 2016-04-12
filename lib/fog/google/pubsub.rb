@@ -27,6 +27,7 @@ module Fog
       request :get_topic
       request :create_topic
       request :delete_topic
+      request :publish_topic
     end
   end
 end
