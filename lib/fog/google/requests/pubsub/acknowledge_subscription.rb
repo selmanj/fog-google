@@ -16,7 +16,7 @@ module Fog
             end
           }
 
-          response = request(api_method, parameters, body)
+          request(api_method, parameters, body)
         end
       end
 
