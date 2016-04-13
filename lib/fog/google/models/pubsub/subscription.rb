@@ -29,6 +29,15 @@ module Fog
           end
         end
 
+        def acknowledge(messages)
+          return if messages.empty?
+
+          ack_ids = messages.map { |m| m.is_a?(ReceivedMessage) ? m.ack_id : m.to_s }
+
+          service.acknowledge_subscription(name, ack_ids)
+          return
+        end
+
         def save
           requires :name, :topic
 

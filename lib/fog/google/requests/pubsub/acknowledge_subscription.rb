@@ -6,14 +6,11 @@ module Fog
           api_method = @pubsub.projects.subscriptions.acknowledge
 
           parameters = {
-            "subscription" => (subscription.is_a?(Subscription) ? subscription.name : subscription.to_s),
+            "subscription" => subscription.to_s,
           }
 
           body = {
-            "ackIds" => ack_ids.map do |ack_id|
-              return ack_id.ack_id if ack_id.is_a?(ReceivedMessage)
-              ack_id.to_s
-            end
+            "ackIds" => ack_ids
           }
 
           request(api_method, parameters, body)
