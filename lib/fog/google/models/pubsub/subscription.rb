@@ -11,10 +11,10 @@ module Fog
         attribute :push_config, :aliases => "pushConfig"
         attribute :ack_deadline_seconds, :aliases => "ackDeadlineSeconds"
 
-        def pull(return_immediately = true, max_messages = 10)
+        def pull(options = {})
           requires :name
 
-          data = service.pull_subscription(name, return_immediately, max_messages).body
+          data = service.pull_subscription(name, options).body
 
           return [] if !data.key?('receivedMessages')
           # Turn into a list of ReceivedMessage, but ensure we perform a base64 decode first

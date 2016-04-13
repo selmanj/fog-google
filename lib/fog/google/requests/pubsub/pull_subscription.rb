@@ -2,7 +2,7 @@ module Fog
   module Google
     class Pubsub
       class Real
-        def pull_subscription(subscription, return_immediately = true, max_messages = 10)
+        def pull_subscription(subscription, options = {})
           api_method = @pubsub.projects.subscriptions.pull
 
           parameters = {
@@ -10,8 +10,8 @@ module Fog
           }
 
           body = {
-            "returnImmediately" => return_immediately,
-            "maxMessages" => max_messages
+            "returnImmediately" => options.fetch(:return_immediately, true),
+            "maxMessages" => options.fetch(:max_messages, 10)
           }
 
           response = request(api_method, parameters, body)
