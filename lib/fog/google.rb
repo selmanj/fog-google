@@ -24,7 +24,7 @@ module Fog
     service(:compute, "Compute")
     service(:dns, "DNS")
     service(:monitoring, "Monitoring")
-    service(:pubsub, "Pub/Sub")
+    service(:pubsub, "Pubsub")
     service(:storage, "Storage")
     service(:sql, "SQL")
 
