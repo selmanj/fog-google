@@ -9,7 +9,7 @@ module Fog
                  :app_name, :app_version, :google_json_key_location, :google_json_key_string
 
       GOOGLE_PUBSUB_API_VERSION    = "v1"
-      GOOGLE_PUBSUB_BASE_URL       = "https://pubsub.googleapis.com/"
+      GOOGLE_PUBSUB_BASE_URL       = "https://www.googleapis.com/pubsub"
       GOOGLE_PUBSUB_API_SCOPE_URLS = %w(https://www.googleapis.com/auth/pubsub)
 
       ##
